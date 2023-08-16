@@ -1,12 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
 
+const host = window.location.hostname === "localhost" ? window.location.origin : "https://dankocher.github.io/metronome_reactjs";
+
 function Metronome() {
     const [tempo, setTempo] = useState(200);
     const [isPlaying, setIsPlaying] = useState(false);
     const [beats, setBeats] = useState(0);
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    const tickSound = useRef(new Audio("/audio/sound0.wav"));
+    const tickSound = useRef(new Audio(host + "/audio/sound0.wav"));
 
     useEffect(() => {
         if (isPlaying) {
