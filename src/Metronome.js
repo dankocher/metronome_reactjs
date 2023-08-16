@@ -92,8 +92,8 @@ function Metronome() {
     const toggleMetronome = () => {
         if (isPlaying) {
             setIsPlaying(false);
-            setBeats(0);
         } else {
+            setBeats(0);
             setIsPlaying(true);
         }
     };
