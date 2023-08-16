@@ -32,13 +32,14 @@ const Count = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 50px 50px;
+  //width: 100px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 
@@ -111,7 +112,6 @@ function Metronome() {
                     type="number"
                     id="tempo"
                     value={tempo}
-                    style={{marginTop: 10, textAlign: "center", fontSize: 20, width: 80}}
                     onChange={(e) => setTempo(parseInt(e.target.value, 10) || 0)}
                     disabled={isPlaying}
                 />
